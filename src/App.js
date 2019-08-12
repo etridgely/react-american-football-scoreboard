@@ -21,8 +21,8 @@ function App() {
           </div>
           <div className="timer">00:03</div>
           <div className="away">
-            <h2 className="away__name">{awayscore}</h2>
-            <div className="away__score">32</div>
+            <h2 className="away__name">Tigers</h2>
+            <div className="away__score">{awayscore}</div>
           </div>
         </div>
         <BottomRow />
@@ -30,12 +30,12 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown">Home Touchdown</button>
-          <button className="homeButtons__fieldGoal">Home Field Goal</button>
+          <button className="homeButtons__touchdown" onClick={() => setHome(homescore + 7)}>Home Touchdown</button>
+          <button className="homeButtons__fieldGoal" onClick={() => setHome(homescore + 3)} >Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown">Away Touchdown</button>
-          <button className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button className="awayButtons__touchdown" onClick={() => setAway(awayscore + 7)}>Away Touchdown</button>
+          <button className="awayButtons__fieldGoal" onClick={() => setAway(awayscore + 3)}>Away Field Goal</button>
         </div>
       </section>
     </div>
